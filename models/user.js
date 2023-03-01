@@ -18,6 +18,10 @@ User.findByEmail = (email)=>{
         email,
         name,
         lastname,
+        gender,
+        birthdate,
+        weight,
+        height,
         image,
         password,
         session_token
@@ -40,6 +44,10 @@ User.findById = (id,callback) => {
         email,
         name,
         lastname,
+        gender,
+        birthdate,
+        weight,
+        height,
         image,
         password,
         session_token
@@ -71,6 +79,10 @@ User.create =async(user) => {
             email,
             name,
             lastname,
+            gender,
+            birthdate,
+            weight,
+            height,
             image,
             password,
             created_at,
@@ -78,7 +90,7 @@ User.create =async(user) => {
 
 
         )
-        VALUES($1, $2, $3, $4 , $5, $6 , $7) RETURNING id 
+        VALUES($1, $2, $3, $4 , $5, $6 , $7, $8, $9, $10, $11) RETURNING id 
     
     
     `;
@@ -87,6 +99,10 @@ User.create =async(user) => {
         user.email,
         user.name,
         user.lastname,
+        user.gender,
+        user.birthdate,
+        user.weight,
+        user.height,
         user.image,
         hash,
         new Date(),

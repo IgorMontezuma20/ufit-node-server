@@ -86,13 +86,17 @@ async login(req,res,next){
             name: myUser.name,
             lastname: myUser.lastname,
             email: myUser.email,
+            gender: myUser.gender,
+            birthdate: myUser.birthdate,
+            weight: myUser.weight,
+            height: myUser.height,
             image: myUser.image,
             session_token: `JWT ${token}`
            
         };
         return res.status(201).json({
             success: true,
-            message: 'O Usuário está sendo autentido',
+            message: 'O Usuário está sendo autenticado',
             data:data
         });
        }
