@@ -134,4 +134,34 @@ module.exports = {
       });
     }
   },
+
+  async updateWithoutImage(req,res,next){
+
+    try{
+
+     console.log('usuario',req.body);
+     const user = req.body; //cliente deve enviar um objeto com os dados dos usario 
+     console.log('Usuario Passado',user);
+
+     await User.update(user); // Guardar imagem na base de dados
+     return res.status(201).json({
+        success : true ,
+        message: 'Os dados do usuÃ¡rio foram atualizados corretamente',
+        data:user
+
+     });
+
+    }catch(error){
+
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            success: false,
+            message: 'Error ao atualizar os dados do  usuario',
+            error: error
+
+        });
+
+    }
+
+}
 };

@@ -4,7 +4,8 @@
   "description": "servidor da aplicacao ufit",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
   },
   "author": "Gabriel Farias, Igor Montezuma de Miranda, Thiago Costa de Jesus",
   "license": "MIT",

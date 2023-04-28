@@ -116,23 +116,24 @@ User.create =async(user) => {
 
 User.update = (user) => {
 
-    const sql = 
+    const sql = `
     UPDATE
         users
     SET
         name = $2,
         lastname = $3,
         gender = $4,
-        birthdate = $5
+        birthdate = $5,
         weight = $6,
         height = $7,
         image = $8,
         updated_at = $9
     WHERE 
         id = $1
-    ;
+    `;
 
     return db.none(sql, [
+        user.id,
         user.name,
         user.lastname,
         user.gender,
@@ -144,6 +145,8 @@ User.update = (user) => {
     ]);
     / Fim */
 }
+
+
 
 
 module.exports = User;
