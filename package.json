@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "start": "node server",
+    "vercel-build": "npx migrate deploy"
   },
   "author": "Gabriel Farias, Igor Montezuma de Miranda, Thiago Costa de Jesus",
   "license": "MIT",
@@ -18,11 +19,13 @@
     "firebase-admin": "^11.5.0",
     "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.0",
+    "migrate": "^1.8.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "pg": "^8.10.0",
     "pg-promise": "^11.2.0",
     "util": "^0.12.5"
   }
