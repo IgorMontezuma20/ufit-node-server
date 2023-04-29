@@ -1,0 +1,9 @@
+{
+  "lastRun": "migration.sql",
+  "migrations": [
+    {
+      "title": "migration.sql",
+      "timestamp": 1682795796844
+    }
+  ]
+}

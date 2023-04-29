@@ -53,9 +53,9 @@ users(app, upload);
 
 /* FIM DA CHAMADA  */
 
-server.listen(port,function(){
+server.listen(port, function () {
 
-     console.log('Listening on port '+ port)
+     console.log('Aplicação de NodeJS ' + port)
 
 
 });
