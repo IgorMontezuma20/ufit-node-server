@@ -53,9 +53,16 @@ users(app, upload);
 
 /* FIM DA CHAMADA  */
 
-server.listen(port, function () {
+/*server.listen(3000,'10.0.0.101' || 'localhost',function(){
 
-     console.log('Aplicação de NodeJS ' + port)
+     console.log('Aplicação de NodeJS ' + port + 'Iniciada...')
+
+
+});*/
+
+server.listen(port,function(){
+
+console.log('Listening on port '+ port)
 
 
 });
