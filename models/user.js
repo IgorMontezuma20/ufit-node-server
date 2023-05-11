@@ -146,6 +146,15 @@ User.update = (user) => {
     / Fim */
 }
 
+User.delete = (id) => {
+    const sql = `
+      DELETE FROM users
+      WHERE id = $1
+    `;
+    
+    return db.none(sql, [id]);
+  };
+
 
 
 

@@ -146,7 +146,7 @@ module.exports = {
      await User.update(user); // Guardar imagem na base de dados
      return res.status(201).json({
         success : true ,
-        message: 'Os dados do usuÃ¡rio foram atualizados corretamente',
+        message: 'Os dados do usuario foram atualizados corretamente',
         data:user
 
      });
@@ -163,5 +163,26 @@ module.exports = {
 
     }
 
+},
+async delete(req, res, next) {
+  try {
+    const userId = req.params.userId; // ID do usuário a ser excluído
+
+    // Chame o método `delete` do modelo `User` para excluir a conta
+    await User.delete(userId); 
+
+    return res.status(200).json({
+      success: true,
+      message: "A conta do usuário foi excluída com sucesso",
+    });
+  } catch (error) {
+    console.log(`Error: ${error}`);
+    return res.status(500).json({
+      success: false,
+      message: "Erro ao excluir a conta do usuário",
+      error: error,
+    });
+  }
 }
+
 };
